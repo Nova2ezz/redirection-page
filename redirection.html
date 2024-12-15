@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirection Linkvertise</title>
+
+    <script>
+        // Remplacez par votre lien Linkvertise
+        const linkvertiseUrl = "https://direct-link.net/1227408/gojo-script-v2-pastebin"; // Votre lien Linkvertise
+
+        let startTime = Date.now();
+
+        // Fonction de redirection avec vérification du temps
+        function checkRedirection() {
+            let currentTime = Date.now();
+            let timeTaken = currentTime - startTime;
+
+            // Si l'utilisateur a pris moins de 5 secondes pour accomplir l'action, c'est probablement un bypass
+            if (timeTaken < 5000) {
+                window.location.href = linkvertiseUrl; // Rediriger l'utilisateur vers Linkvertise
+            } else {
+                // Si l'utilisateur a attendu assez longtemps, redirige vers le lien final de Linkvertise
+                window.location.href = linkvertiseUrl; 
+            }
+        }
+
+        // Lance la vérification après 1 seconde pour s'assurer que l'utilisateur a eu le temps de compléter l'action
+        window.onload = function() {
+            setTimeout(checkRedirection, 1000); // Attendre 1 seconde avant de vérifier
+        };
+    </script>
+</head>
+<body>
+    <h1>Veuillez patienter pendant la redirection...</h1>
+    <p>Si vous tentez de contourner la redirection, vous serez redirigé à nouveau.</p>
+</body>
+</html>
